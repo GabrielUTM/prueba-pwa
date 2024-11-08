@@ -61,7 +61,7 @@ self.addEventListener("activate", (e) => {
 
 //Evento fetch: intercepta las solicitudes de red y decide como responder 
 self.addEventListener("fetch", e=>{
-    e.respondeWith(caches.match(e.request).then(res=>{
+    e.respondWith(caches.match(e.request).then(res=>{
         if(res){
             return res
         }
